@@ -4,4 +4,4 @@
         nextEl: "#next",
         prevEl: "#prev",
       },
-    });
+    }); 
