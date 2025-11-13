@@ -71,8 +71,9 @@ img {
     text-align: center;
 }
 
-/* .mt-4 {
-} */
+.mt-4 {
+    margin-top: 4rem;
+}
 
 .mt-half {
     margin-top:.5rem;
@@ -82,6 +83,11 @@ img {
     margin: auto;
 
 }
+
+.mt-one-half{
+    margin-top: 1.5rem;
+}
+
 
 
 
@@ -325,6 +331,7 @@ h4 {
     padding: .8rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0 5px 8px ;
     border-radius: 1rem;
+    margin: 4rem auto 0 auto;
 }
 
 input[type="email"]{
@@ -344,7 +351,41 @@ input[type="email"]:focus{
 
 /* FOOTER STYLING */
 
+.footer-container{
+    margin-top: 10rem;
+    padding-block: 4rem;
+    background: var(--hint-yellow);
+}.footer-container .flex{
+    align-items: flex-start ;
+}
 
+.footer-wrapper{
+    flex: 1;
+    flex-basis: 150px;
+}
+
+.footer-wrapper:nth-child(1){
+    flex: 2;
+    flex-basis: 300px;
+}
+.footer-wrapper .social-icon{
+    background: var(--pure-white);
+}
+
+.footer-wrapper .social-icon:hover{
+    background:var(--lead);
+    color: var(--gold-finger);
+}
+
+.footer-link{
+    color: gray;
+    font-size: 1.1rem;
+    transition: .3s ease-in-out;
+}
+
+.footer-link:hover{
+    color: var(--lead);
+}
 
 
 
@@ -464,7 +505,7 @@ input[type="email"]:focus{
     }
 
     .app-container .content h2 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
 
 
