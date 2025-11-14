@@ -64,7 +64,7 @@ img {
 }
 
 .p-top {
-    padding-top: 10rem;
+    padding-top: 6rem;
 }
 
 .text-center {
@@ -133,10 +133,10 @@ img {
     line-height: 20px;
 }
 
-.desktop-hamburger .hamburger {
-    font-size: 1.rem;
-    display: none;
-}
+  .desktop-action .hamburger {
+        display: none;
+        font-size: 1rem;
+    }
 
 .mobile-menu {
     display: none;
@@ -458,7 +458,7 @@ input[type="email"]:focus{
 /* FOOTER STYLING */
 
 .footer-container{
-    margin-top: 10rem;
+    margin-top: 6rem;
     padding-block: 4rem;
     background: var(--hint-yellow);
 }.footer-container .flex{
