@@ -26,7 +26,7 @@ closeBtn.addEventListener("click", () =>
 hamburger.addEventListener("click", () =>
   mobileMenu.classList.toggle("mobile-menu-active")
 );
-hamburger.addEventListener("click", () => bars.classList.toggle("fa-xmark"));
+hamburger.addEventListener("click", () => bars.classList.toggle("fa-bars"));
 
 let ProductList = [];
 let cartProduct = [];
