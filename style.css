@@ -148,6 +148,16 @@ img {
     color: var(--gold-finger);
 }
 
+.navlist a{
+    transition: 0.3s ease-in-out;
+    color: black;
+}
+
+.navlist a:hover{
+    color: var(--gold-finger);
+    
+}
+
 
 
 /* SECTIONS STYLING */
