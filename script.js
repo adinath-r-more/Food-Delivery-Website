@@ -9,7 +9,7 @@ var swiper = new Swiper(".mySwiper", {
 const cartIcon = document.querySelector(".cart-icon");
 const cartTab = document.querySelector(".cart-tab");
 const closeBtn = document.querySelector(".close-btn");
-const cardList = document.querySelector(".card-list");
+const cardList = document.querySelector(".cart-icon");
 const cartList = document.querySelector(".cart-list");
 const cartTotal = document.querySelector(".cart-total");
 const cartValue = document.querySelector(".cart-value");
@@ -57,15 +57,15 @@ const showCards = () => {
     const orderCard = document.createElement("div");
     orderCard.classList.add("order-card");
 
-    // orderCard.innerHTML = `
-    //            <div class="card-image">
-    //               <img src="${product.image}">
-    //            </div>
+    orderCard.innerHTML = `
+               <div class="card-image">
+                  <img src="${product.image}">
+               </div>
 
-    //             <h4>${product.name}</h4>
-    //             <h4 class="price">${product.price}</h4>
-    //             <a href="#" class="btn card-btn">Add to Card</a>
-    //       `;
+                <h4>${product.name}</h4>
+                <h4 class="price">${product.price}</h4>
+                <a href="#" class="btn card-btn">Add to Card</a>
+          `;
 
     cardList.appendChild(orderCard);
 
