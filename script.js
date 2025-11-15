@@ -15,7 +15,7 @@ const cartTotal = document.querySelector(".cart-total");
 const cartValue = document.querySelector(".cart-value");
 const hamburger = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-menu");
-const bars = document.querySelector(".fa-solid");
+const bars = document.querySelector(".fa-bars");
 
 cartIcon.addEventListener("click", () =>
   cartTab.classList.add("cart-tab-active")
@@ -26,7 +26,7 @@ closeBtn.addEventListener("click", () =>
 hamburger.addEventListener("click", () =>
   mobileMenu.classList.toggle("mobile-menu-active")
 );
-hamburger.addEventListener("click", () => bars.classList.toggle("fa-solid"));
+hamburger.addEventListener("click", () => bars.classList.toggle("fa-bars"));
 
 let ProductList = [];
 let cartProduct = [];
@@ -57,15 +57,15 @@ const showCards = () => {
     const orderCard = document.createElement("div");
     orderCard.classList.add("order-card");
 
-    orderCard.innerHTML = `
-               <div class="card-image">
-                  <img src="${product.image}">
-               </div>
+    // orderCard.innerHTML = `
+    //            <div class="card-image">
+    //               <img src="${product.image}">
+    //            </div>
 
-                <h4>${product.name}</h4>
-                <h4 class="price">${product.price}</h4>
-                <a href="#" class="btn card-btn">Add to Card</a>
-          `;
+    //             <h4>${product.name}</h4>
+    //             <h4 class="price">${product.price}</h4>
+    //             <a href="#" class="btn card-btn">Add to Card</a>
+    //       `;
 
     cardList.appendChild(orderCard);
 
