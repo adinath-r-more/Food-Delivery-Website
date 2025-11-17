@@ -16,12 +16,13 @@ const cartValue = document.querySelector('.cart-value');
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const bars = document.querySelector('.fa-bars');
+hamburgerOne = document.querySelector('.fa-times')
 
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
 hamburger.addEventListener('click', () => bars.classList.remove('fa-bars'));
-hamburger.addEventListener('click', () => bars.classList.add('fa-times'));
+hamburgerOne.addEventListener('click', () => bars.classList.add('fa-times'));
 
 let ProductList = [];
 let cartProduct = [];
