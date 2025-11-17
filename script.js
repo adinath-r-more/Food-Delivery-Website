@@ -23,7 +23,7 @@ const barsOne = document.querySelector('.fa-bars');
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
-hamburger.addEventListener('click', () => bars.classList.replace('fa-bars'));
+hamburger.addEventListener('click', () => bars.classList.remove('fa-bars'));
 hamburgerOne.addEventListener('click', () => barsOne.classList.add('fa-times'));
 
 let ProductList = [];
