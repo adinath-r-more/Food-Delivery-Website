@@ -83,8 +83,8 @@ const addToCart = (product) => {
 
   cartProduct.push(product);
 
-  let quantity = 1; 
-  let price = parseFloat(product.price.replace('$', ''));
+  // let quantity = 1; 
+  // let price = parseFloat(product.price.replace('$', ''));
 
 
   const cartItem = document.createElement('div');
