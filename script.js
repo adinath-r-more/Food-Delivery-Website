@@ -64,7 +64,7 @@ const showCards = () => {
     cardList.appendChild(orderCard);
 
 
-    const cardBtn = orderCard.querySelector('.cart-btn');
+    const cardBtn = orderCard.querySelector('.card-btn');
 
     cardBtn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -83,8 +83,8 @@ const addToCart = (product) => {
 
   cartProduct.push(product);
 
-  // let quantity = 1; 
-  // let price = parseFloat(product.price.replace('$', ''));
+  let quantity = 1; 
+  let price = parseFloat(product.price.replace('$', ''));
 
 
   const cartItem = document.createElement('div');
