@@ -18,7 +18,7 @@ const hamburgerOne = document.querySelector('.hamburger-2');
 
 const mobileMenu = document.querySelector('.mobile-menu');
 const bars = document.querySelector('.fa-bars');
-const barsOne = document.querySelector('.fa-bars');
+const barsOne = document.querySelector('.fa-times');
 
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
