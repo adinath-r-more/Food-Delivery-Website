@@ -21,6 +21,7 @@ const barsOne = document.querySelector('.fa-times');
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-close'));
 hamburger.addEventListener('click', () => bars.classList.add('fa-bars'));
 hamburger.addEventListener('click', () => barsOne.classList.remove('fa-times'));
 
