@@ -2,43 +2,43 @@
     {
         "id": 1,
         "name": "Double Beef Burger",
-        "price": "$10",
+        "price": "$16.45",
         "image": "img/burger.png"
     },
     {
         "id": 2,
         "name": "Veggie Pizza",
-        "price": "$8",
+        "price": "$10.31",
         "image": "img/pizza.png"
     },
     {
         "id": 3,
         "name": "Fried Chicken",
-        "price": "$15",
+        "price": "$15.30",
         "image": "img/fried-chicken.png"
     },
     {
         "id": 4,
         "name": "Chicken Roll",
-        "price": "$50",
+        "price": "$50.45",
         "image": "img/chicken-roll.png"
     },
     {
         "id": 5,
         "name": "Chicken Lasagna",
-        "price": "$60",
+        "price": "$60.65",
         "image": "img/lasagna.png"
     },
     {
         "id": 6,
         "name": " Sub Sandwich",
-        "price": "$70",
+        "price": "$70.31",
         "image": "img/sandwich.png"
     },
     {
         "id": 7,
         "name": "Spring Roll",
-        "price": "$50",
+        "price": "$50.55",
         "image": "img/spring-roll.png"
     },
     {
