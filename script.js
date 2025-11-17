@@ -22,9 +22,9 @@ const barsClose  = document.querySelector('.fa-times');
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
-hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-close'));
+// hamburger.addEventListener('click', () => mobileMenu.classList.replace('mobile-menu-close'));
 hamburger.addEventListener('click', () => bars.classList.remove('fa-bars'));
-hamburgerOne.addEventListener('click', () => barsClose.classList.add('fa-times')); 
+hamburger.addEventListener('click', () => barsClose.classList.add('fa-times')); 
 
 let ProductList = [];
 let cartProduct = [];
