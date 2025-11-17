@@ -20,7 +20,8 @@ const bars = document.querySelector('.fa-bars');
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
-hamburger.addEventListener('click', () => bars.classList.add('fa-bars'));
+hamburger.addEventListener('click', () => bars.classList.remove('fa-bars'));
+hamburger.addEventListener('click', () => bars.classList.add('fa-times'));
 
 let ProductList = [];
 let cartProduct = [];
