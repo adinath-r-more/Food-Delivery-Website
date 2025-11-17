@@ -22,7 +22,7 @@ cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
 hamburger.addEventListener('click', () => bars.classList.remove('fa-bars'));
-hamburgerOne.addEventListener('click', () => bars.classList.add('fa-times'));
+hamburger.addEventListener('click', () => hamburgerOne.classList.add('fa-times'));
 
 let ProductList = [];
 let cartProduct = [];
