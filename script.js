@@ -16,7 +16,7 @@ const cartValue = document.querySelector('.cart-value');
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const bars = document.querySelector('.fa-bars');
-hamburgerOne = document.querySelector('.fa-times')
+const hamburgerOne = document.querySelector('.fa-times')
 
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
