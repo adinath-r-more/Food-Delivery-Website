@@ -587,6 +587,10 @@ input[type="email"]:focus{
         left: 50%;
         transform: translate(-50%);
     }
+    .mobile-menu-close {
+        left: 50%;
+        transform: translate(-50%);
+    }
 
     /* SECTIONS STYLING */
 
