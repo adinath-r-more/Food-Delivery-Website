@@ -110,7 +110,8 @@ const addToCart = (product) => {
         </div>
     `;
 
-    cardList.appendChild(cartItem); 
+    cartList.appendChild(cartItem);
+
     updateTotals();
 
     const plusBtn = cartItem.querySelector('.plus');
