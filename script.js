@@ -13,35 +13,35 @@ const cardList = document.querySelector('.card-list');
 const cartList = document.querySelector('.cart-list');
 const cartTotal = document.querySelector('.cart-total');
 const cartValue = document.querySelector('.cart-value');
-const hamburger = document.querySelector('.hamburger'); 
+const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 const bars = document.querySelector('.fa-bars');
 
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
-hamburger.addEventListener('click',()=> mobileMenu.classList.toggle('mobile-menu-active'));
-hamburger.addEventListener('click',()=> bars.classList.toggle('fa-bars'));
+hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
+hamburger.addEventListener('click', () => bars.classList.toggle('fa-bars'));
 
 let ProductList = [];
 let cartProduct = [];
 
-const updateTotals = () =>{
+const updateTotals = () => {
 
-    let totalPrice = 0;
-    let totalQuantity = 0;
+  let totalPrice = 0;
+  let totalQuantity = 0;
 
-    document.querySelectorAll('.item').forEach(item => {
+  document.querySelectorAll('.item').forEach(item => {
 
-      const quantity = parseInt(item.querySelector('.quantity-value').textContent)
+    const quantity = parseInt(item.querySelector('.quantity-value').textContent)
 
-      const price = parseFloat(item.querySelector('.item-total').textContent.replace('$',''));
+    const price = parseFloat(item.querySelector('.item-total').textContent.replace('$', ''));
 
-      totalPrice += price;
-      totalQuantity += quantity;
-    });
+    totalPrice += price;
+    totalQuantity += quantity;
+  });
 
-    cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
-    cartValue.textContent = totalQuantity;  
+  cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
+  cartValue.textContent = totalQuantity;
 }
 
 const showCards = () => {
@@ -74,21 +74,21 @@ const showCards = () => {
 };
 
 const addToCart = (product) => {
-  
+
   const existingProduct = cartProduct.find(item => item.id === product.id);
-  if(existingProduct){
+  if (existingProduct) {
     alert('Item already in tour cart!');
     return;
   }
 
   cartProduct.push(product);
 
-  let quantity = 1; 
+  let quantity = 1;
   let price = parseFloat(product.price.replace('$', ''));
 
 
   const cartItem = document.createElement('div');
-  cartItem.classList.add('.item');
+  cartItem.classList.add('item');
 
   cartItem.innerHTML = `
        <div class="item-image">
@@ -110,46 +110,46 @@ const addToCart = (product) => {
         </div>
     `;
 
-    cartList.appendChild(cartItem);
+  cartList.appendChild(cartItem);
 
+  updateTotals();
+
+  const plusBtn = cartItem.querySelector('.plus');
+  const quantityValue = cartItem.querySelector('.quantity-value');
+  const itemTotal = cartItem.querySelector('.item-total');
+  const minusBtn = cartItem.querySelector('.minus');
+
+  plusBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    quantity++;
+
+    quantityValue.textContent = quantity;
+    itemTotal.textContent = `$${(price * quantity).toFixed(2)}`;
     updateTotals();
 
-    const plusBtn = cartItem.querySelector('.plus');
-    const quantityValue = cartItem.querySelector('.quantity-value');
-    const itemTotal = cartItem.querySelector('.item-total');
-    const minusBtn = cartItem.querySelector('.minus');
+  });
 
-    plusBtn.addEventListener('click',(e)=>{
-      e.preventDefault();
-      quantity++;
-
+  minusBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (quantity > 1) {
+      quantity--;
       quantityValue.textContent = quantity;
       itemTotal.textContent = `$${(price * quantity).toFixed(2)}`;
       updateTotals();
+    } else {
+      cartItem.classList.add('slide-out')
 
-    });
-
-    minusBtn.addEventListener('click',(e)=>{
-      e.preventDefault();
-      if (quantity > 1){
-        quantity--;
-        quantityValue.textContent =   quantity;
-        itemTotal.textContent = `$${(price * quantity).toFixed(2)}`;
+      setTimeout(() => {
+        cartItem.remove();
+        cartProduct = cartProduct.filter(item => item.id !== product.id);
         updateTotals();
-      }else{
-        cartItem.classList.add('slide-out')
 
-        setTimeout(()=>{
-          cartItem.remove();
-          cartProduct = cartProduct.filter(item => item.id !== product.id);
-          updateTotals();
+      }, 300)
 
-        } ,300)
-        
-      }
+    }
 
-      
-    })
+
+  })
 }
 
 const initApp = () => {
