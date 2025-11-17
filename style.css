@@ -503,6 +503,15 @@ input[type="email"]:focus{
     color: var(--lead);
 }
 
+.close-menu{
+    display: none;
+}
+.hamburger.active .close-menu{
+    display: block;
+}
+.hamburger.active .fa-bars{
+    display: none;
+}
 
 
 

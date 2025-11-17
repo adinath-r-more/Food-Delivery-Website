@@ -14,17 +14,14 @@ const cartList = document.querySelector('.cart-list');
 const cartTotal = document.querySelector('.cart-total');
 const cartValue = document.querySelector('.cart-value');
 const hamburger = document.querySelector('.hamburger');
-const hamburgerOne = document.querySelector('.hamburger-2');
 
 const mobileMenu = document.querySelector('.mobile-menu');
-const bars = document.querySelector('.fa-bars');
-const barsOne = document.querySelector('.fa-times');
+const closeMenu = document.querySelector('.hamburger');
 
 cartIcon.addEventListener('click', () => cartTab.classList.add('cart-tab-active'));
 closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
 hamburger.addEventListener('click', () => mobileMenu.classList.toggle('mobile-menu-active'));
-hamburger.addEventListener('click', () => bars.classList.remove('fa-bars'));
-hamburgerOne.addEventListener('click', () => barsOne.classList.add('fa-times'));
+hamburger.addEventListener('click', () => closeMenu.classList.toggle('active'));
 
 let ProductList = [];
 let cartProduct = [];
